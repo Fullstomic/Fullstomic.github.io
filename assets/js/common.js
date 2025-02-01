@@ -1,15 +1,15 @@
-$(function() {
-    $(window).on('scroll',function() {
+$(function () {
+    $(window).on('scroll', function () {
         scroll = $(window).scrollTop();
-        if(scroll >= 500) {
+        if (scroll >= 250) {
             $(".header").addClass("header_change");
             $(".hamburger-menu").addClass("scroll-action");
-        }else{
+        } else {
             $(".header").removeClass("header_change");
             $(".hamburger-menu").removeClass("scroll-action");
         }
     });
-    $(".hamburger-menu").on('click', function() {
+    $(".hamburger-menu").on('click', function () {
         $(".hamburger-menu").toggleClass("active");
         $(".header__navigation").toggleClass("open");
     });
