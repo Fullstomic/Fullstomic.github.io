@@ -275,17 +275,17 @@
     font-size: 3rem;
     text-align: center;
 }
-.home-profile {
+.home-about {
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.home-profile__content {
+.home-about__content {
     width: 50%;
 }
 
-.home-profile__link {
+.home-about__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,12 +313,19 @@
         transition: all 0.2s;
     }
 }
-
+.home-about__content--title {
+    font-size: 2rem;
+    text-align: center;
+}
+.home-about__motto-jp {
+    font-size: 5rem;
+}
 .home-news {
     height: 100vh;
 }
 .home-news__title {
     text-align: center;
+    font-size: 2rem;
 }
 .home-news__list {
     list-style: none;
@@ -388,6 +395,7 @@
 }
 .home-portfolio__title {
     text-align: center;
+    font-size: 2rem;
 }
 .home-portfolio__portfolio-image-list {
     display: flex;

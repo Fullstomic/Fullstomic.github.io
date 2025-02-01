@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +16,12 @@
     </script>
     <script type="module">
         import '@material/web/all.js';
-        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
 
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
     <!-- #endregion -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,17 +31,18 @@
     <script src="./../assets/js/jquery.js"></script>
     <script src="./../assets/js/common.js"></script>
 </head>
+
 <body>
 
     <header class="header" id="header">
-        <a href="" class="header__top-link">
+        <a href="./../" class="header__top-link">
             Fullstomic
         </a>
         <nav class="header__navigation">
             <ul>
                 <li>
-                    <a href="./../profile/" class="header__navigation--link">
-                        Profile
+                    <a href="./../about/" class="header__navigation--link">
+                        About
                     </a>
                 </li>
                 <li>
@@ -68,7 +71,40 @@
         </div>
     </header>
     <main>
-        
+        <section>
+            <h1>
+                About
+            </h1>
+        </section>
+        <section>
+            <h2 class="">
+                真剣に情熱をもって楽しく
+            </h2>
+            <p class="">
+                楽しみつつ、熱を込めてかつ真剣に取り組むことでより良いものができると考えています。まずは自分から意識することでどんな人でも同じ体験ができるのではと考えています。
+            </p>
+        </section>
+        <section>
+            <h2>
+                Profile
+            </h2>
+            <ul>
+                <li>
+                    <h3>
+                        名前
+                    </h3>
+                    <p>
+                        Fullstomic
+                    </p>
+                </li>
+                <li>
+                    <h3>使用言語</h3>
+                    <p>
+                        Java、JavaScript、C#、PHP
+                    </p>
+                </li>
+            </ul>
+        </section>
     </main>
     <footer class="footer">
         <section class="footer__content_section">
@@ -81,7 +117,7 @@
                         <a href="./" class="footer-link">Home</a>
                     </li>
                     <li>
-                        <a href="./../profile/" class="footer-link">Profile</a>
+                        <a href="./../about/" class="footer-link">about</a>
                     </li>
                     <li>
                         <a href="./../news/" class="footer-link">News</a>
@@ -99,4 +135,5 @@
         </section>
     </footer>
 </body>
+
 </html>
