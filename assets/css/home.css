@@ -203,3 +203,12 @@
         transition: all 0.2s;
     }
 }
+
+/* #region ホーム以外のページの共通部分 */
+.common-page-title {
+    background-color: #719eff;
+}
+
+.common-page-title__headline {}
+
+/* #endregion */
