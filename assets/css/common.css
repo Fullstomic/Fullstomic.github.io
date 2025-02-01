@@ -302,7 +302,19 @@ h3 {
 
 /* #endregion */
 /* #endregion */
-/* #region ホーム */
+/* #region ホーム以外のページの共通部分 */
+.common-page-title {
+    background-color: #719eff;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.common-page-title__headline {
+    color: #fff;
+    font-size: 2rem;
+}
 
 /* #endregion */
