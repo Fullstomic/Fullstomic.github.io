@@ -1,11 +1,40 @@
-.portfolio {}
+.portfolio {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 0;
+}
 
-.portfolio__list {}
+.portfolio__list {
+    list-style: none;
+    padding: 0;
 
-.portfolio-link {}
+}
 
-.portfolio-link__image {}
+.portfolio-link {
+    height: 300px;
+    width: 200px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.2s;
+    display: block;
+    padding: 10px 20px;
 
-.portfolio-link__content {}
+    &:hover {
+        background-color: #35353510;
+    }
+}
+
+.portfolio-link__image {
+    display: block;
+    width: 100px;
+    height: 200px;
+}
+
+.portfolio-link__content {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
 
 .portfolio-link__content--title {}
