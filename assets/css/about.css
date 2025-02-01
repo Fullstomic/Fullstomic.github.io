@@ -1,17 +1,75 @@
-.way-of-thinking {}
+.way-of-thinking {
+    height: 100vh;
 
-.way-of-thinking__motto-jp {}
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-.way-of-thinking__paragraph {}
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+}
 
-.profile-section {}
+.way-of-thinking__image {
+    width: 200px;
+    height: 300px;
+}
 
-.profile-section__headline {}
+.way-of-thinking__content {
+    width: 50%;
 
-.profile-content-list {}
+    @media screen and (max-width: 800px) {
+        width: 80%;
+    }
+}
 
-.profile-content-list__content {}
+.way-of-thinking__content--motto-jp {
+    font-size: 4rem;
 
-.profile-content-list__content--headline {}
+    @media screen and (max-width: 800px) {
+        font-size: 3rem;
+
+    }
+}
+
+
+.profile-section {
+    height: 100vh;
+}
+
+.profile-section__headline {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.profile-content-list {
+    list-style: none;
+    width: 80%;
+    margin: auto;
+
+    & li {
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        margin: 50px 0;
+    }
+}
+
+.profile-content-list__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.profile-content-list__content--headline {
+    display: block;
+    width: 150px;
+}
 
 .profile-content-list__content--paragraph {}

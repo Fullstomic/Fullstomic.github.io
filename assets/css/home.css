@@ -22,9 +22,15 @@
 
 .home-about {
     height: 100vh;
+    width: 80%;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 800px) {
+        width: 90%;
+    }
 }
 
 .home-about__content {
@@ -71,6 +77,10 @@
 
 .home-about__motto-jp {
     font-size: 5rem;
+
+    @media screen and (max-width: 800px) {
+        font-size: 3rem;
+    }
 }
 
 .home-news {
@@ -78,14 +88,25 @@
 }
 
 .home-news__title {
-    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    padding: 0;
     font-size: 2rem;
 }
 
 .home-news__list {
     list-style: none;
     width: 80%;
-    margin: 20px auto;
+    display: block;
+    height: auto;
+    margin: auto;
+
+    & li {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
 }
 
 .news-link {
@@ -151,7 +172,10 @@
 }
 
 .home-portfolio__title {
-    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    padding: 0;
     font-size: 2rem;
 }
 
@@ -168,6 +192,7 @@
 .home-portfolio__portfolio-image-list--image {
     width: 200px;
     height: 300px;
+    border: 1px solid #faf9f9;
 }
 
 .home-portfolio__link {

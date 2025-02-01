@@ -24,6 +24,13 @@ h3 {
     font-family: "Noto Sans JP";
 }
 
+section,
+ul,
+li,
+div {
+    padding: 0;
+}
+
 /*#endregion */
 
 /* #region ヘッダー */
@@ -314,7 +321,7 @@ h3 {
 
 .common-page-title__headline {
     color: #fff;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /* #endregion */
