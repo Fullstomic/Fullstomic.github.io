@@ -97,7 +97,7 @@
 
 .home-news__list {
     list-style: none;
-    width: 80%;
+    width: 90%;
     display: block;
     height: auto;
     margin: auto;
@@ -144,6 +144,10 @@
     color: #9f9f9f;
     position: absolute;
     right: 10px;
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 }
 
 .article__date {
