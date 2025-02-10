@@ -82,6 +82,8 @@ div {
     transition: all 0.2s;
     width: 40%;
     z-index: 9998;
+    transform: translateX(30px);
+    transition: all 0.2s;
 
     & ul {
         list-style: none;
@@ -91,6 +93,8 @@ div {
     }
 
     @media screen and (max-width: 1000px) {
+        transform: translateX(30px);
+
         width: 100%;
         height: 100vh;
         background-color: #ffffff;
@@ -106,9 +110,11 @@ div {
         flex-direction: column;
         justify-content: space-around;
 
+
         &.open {
             visibility: visible;
             opacity: 1;
+            transform: translateX(0px);
 
             body {
                 overflow: hidden;
@@ -139,7 +145,7 @@ div {
         right: 0;
         height: 2px;
         background-color: #353535;
-        transition: all 0.2s;
+        transition: width 0.2s;
     }
 
     &:hover {
