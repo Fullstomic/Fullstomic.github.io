@@ -1,0 +1,19 @@
+.search-page-form {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid #c0c0c0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .search-window__form--input {
+        width: 100%;
+    }
+
+    & .search-window__form--submit {
+        padding: 0;
+        margin: 0;
+    }
+}
