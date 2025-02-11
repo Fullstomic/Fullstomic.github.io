@@ -2,7 +2,7 @@
     position: relative;
     height: fit-content;
     width: fit-content;
-    border: 2px solid #c0c0c0;
+    box-shadow: 1px 1px 5px 1px #dfdfdf;
     border-radius: 50px;
     display: flex;
     justify-content: center;

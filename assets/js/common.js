@@ -24,4 +24,15 @@ $(function () {
             $(".search-window").removeClass("search-window__visible");
         }
     });
+
+    $('.article-list').paginathing({//親要素のclassを記述
+        perPage: 5,//1ページあたりの表示件数
+        prevNext: false,
+        prevText: '前へ',//1つ前のページへ移動するボタンのテキスト
+        nextText: '次へ',//1つ次のページへ移動するボタンのテキスト
+        firstLast: false,
+        activeClass: 'navi-active',
+        disabledClass: 'navi-disabled',
+
+    })
 });

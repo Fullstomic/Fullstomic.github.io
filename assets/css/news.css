@@ -1,3 +1,5 @@
+@import url("./common.css");
+
 .article-section {}
 
 .article-section__headline {
@@ -56,4 +58,50 @@
 
 .article__title {
     color: #000000;
+}
+
+.pagination-content {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-link {
+
+    padding: 7px 14px;
+    border-radius: 100px;
+    text-decoration: none;
+    color: #858585;
+    background-color: #719eff7d;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: #719eff;
+        color: #fff;
+    }
+
+    &:active {
+        background-color: #5a7fcf;
+    }
+
+}
+
+.navi-active {
+    & .page-link {
+        padding: 7px 14px;
+        border-radius: 100px;
+        text-decoration: none;
+        background-color: #719eff;
+        transition: all 0.2s;
+        cursor: auto;
+        color: #fff;
+    }
 }
