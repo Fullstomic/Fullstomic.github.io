@@ -298,6 +298,23 @@ div {
     }
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 30px;
+    background-color: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+    border-radius: 30px;
+
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7c7c7c;
+}
+
 .header__navigation--search_open_button {
     background-color: transparent;
     border: none;
