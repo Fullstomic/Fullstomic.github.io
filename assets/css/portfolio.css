@@ -19,9 +19,15 @@
     transition: all 0.2s;
     display: block;
     padding: 10px 20px;
+    box-shadow: 1px 1px 5px #d1d1d1fc;
+    border-radius: 10px;
 
     &:hover {
         background-color: #35353510;
+    }
+
+    &:active {
+        background-color: #35353541;
     }
 }
 
