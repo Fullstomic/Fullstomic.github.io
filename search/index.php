@@ -1,6 +1,39 @@
 <?php
-$query = $_GET["q"];
+try {
+    $table = "mysql:dbname=fullstomic_searchdb;host=localhost;charset=utf8";
+    $user = 'fullstomic_root';
+    $password = '46vi3y7u';
+    $dbh = new PDO($table, $user, $password);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $counter = 0;
 
+    if (isset($_GET["q"])) {
+        $search_word = $_GET["q"];
+        if (false !== strpos($search_word, " ")) {
+            $array = explode(" ", $search_word);
+        } else if (false !== strpos($search_word, "　")) {
+            $array = explode("　", $search_word);
+        } else {
+            $array = explode(",", $search_word);
+        }
+        $sql = "select * from site_list where site_outline like :q0 ";
+        for ($i = 1; $i < count($array); $i++) {
+            $sql .= " or site_outline like :q" . $i;
+        }
+
+        $rec = $dbh->prepare($sql);
+        $current = 0;
+        foreach ($array as $search_array) {
+            $current_word = '%' . $search_word . '%';
+            $rec->bindParam(":q" . $current, $current_word, PDO::PARAM_STR);
+            $current++;
+        }
+        $rec->execute();
+        $result = $rec->fetchAll();
+    }
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -98,7 +131,7 @@ $query = $_GET["q"];
         </section>
         <section class="article-section">
             <h2 class="article-section__headline">
-                <?php echo $query; ?>の検索結果
+                <?php echo $_GET["q"]; ?>の検索結果
             </h2>
             <form action=" ./../search/" class="search-window__form search-page-form" method="get">
                 <input type="text" name="q" required class="search-window__form--input">
@@ -108,21 +141,25 @@ $query = $_GET["q"];
             </form>
             <ul class="article-list">
                 <?php
+                foreach ($result as $results) {
+                    ?>
+                    <li class="article-list__li">
+                        <a href="<?php echo $results['site_address'] ?>" class="article">
+                            <h3 class="article__title">
+                                <?php echo $results["site_title"]; ?>
 
+                            </h3>
+                            <span class="article__guide">
+                                <md-icon>
+                                    chevron_right
+                                </md-icon>
+                            </span>
+                        </a>
+                    </li>
+                    <?php
+                }
                 ?>
-                <li class="article-list__li">
-                    <a href="./article/20250201/" class="article">
-                        <h3 class="article__title">
-                            サイトをリニューアルしました。1
 
-                        </h3>
-                        <span class="article__guide">
-                            <md-icon>
-                                chevron_right
-                            </md-icon>
-                        </span>
-                    </a>
-                </li>
 
             </ul>
         </section>
