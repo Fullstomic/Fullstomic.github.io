@@ -188,6 +188,20 @@ div {
     transition: all 0.2s;
     height: 60px;
     z-index: 9999;
+
+    & a {
+        &:focus-visible {
+            outline-color: #fff;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        & a {
+            &:focus-visible {
+                outline-color: #719eff;
+            }
+        }
+    }
 }
 
 .header_change {
@@ -200,6 +214,8 @@ div {
             outline-color: #719eff;
         }
     }
+
+
 
 }
 
@@ -269,6 +285,7 @@ div {
 
             & .header__navigation--link {
                 font-size: 1.5rem;
+
             }
         }
     }
@@ -278,6 +295,8 @@ div {
     text-decoration: none;
     position: relative;
     color: #353535;
+    transition: all 0.2s;
+    outline: 2px solid transparent;
 
     &::before {
         content: '';
@@ -320,6 +339,8 @@ div {
     border: none;
     cursor: pointer;
     position: relative;
+    outline: 2px solid transparent;
+    transition: all 0.2s;
 
     &::before {
         content: '';
@@ -338,6 +359,17 @@ div {
             left: 0;
         }
     }
+
+    &:focus-visible {
+        outline-color: #ffffff;
+    }
+
+    @media screen and (max-width: 1000px) {
+        &:focus-visible {
+            outline-color: #719eff;
+        }
+    }
+
 }
 
 .hamburger-menu {
@@ -360,6 +392,9 @@ div {
     z-index: 9999;
     background-color: #ffffff;
     -webkit-tap-highlight-color: transparent;
+    outline-offset: 2px;
+    outline: 2px solid transparent;
+
 
     &.scroll-action {
         background-color: #719eff;
