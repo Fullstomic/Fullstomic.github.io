@@ -8,6 +8,7 @@ try {
     $counter = 0;
 
     if (isset($_GET["q"])) {
+        $_GET["q"] = htmlspecialchars($_GET["q"]);
         $search_word = $_GET["q"];
         if (false !== strpos($search_word, " ")) {
             $array = explode(" ", $search_word);
